@@ -20,7 +20,7 @@ class Text
     {
 
         // Check for boolean before processing as string
-        if (is_bool($strText)) {
+        if (is_bool($strText) || is_null($strText)) {
             return '';
         }
 

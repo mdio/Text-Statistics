@@ -28,6 +28,7 @@ class TextStatisticsTest extends \PHPUnit\Framework\TestCase
     -------------------- */
     public function testCleaning()
     {
+        $this->assertSame('', DaveChild\TextStatistics\Text::cleanText(null));
         $this->assertSame('', DaveChild\TextStatistics\Text::cleanText(false));
         $this->assertSame('There once was a little sausage named Baldrick. and he lived happily ever after.', DaveChild\TextStatistics\Text::cleanText('There once was a little sausage named Baldrick. . . .  And he lived happily ever after.!! !??'));
     }
